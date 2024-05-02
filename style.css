@@ -1,0 +1,337 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root {
+  /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+  /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+  --cor-de-fundo: #f5f5f5;
+  --cor-de-link: #000;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--cor-de-fundo);
+  font-family: "Raleway";
+  margin: 0;
+  padding: 0px 31px;
+  line-height: 1;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--cor-de-link);
+}
+
+.menu__list {
+  display: none;
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*Sección Title*/
+
+.menu__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title__profile{
+  width: 98px;
+  height: 98px;
+}
+
+
+.title__network{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  padding: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+.title__subsection{
+  font-weight: normal;
+  font-size: 14px;
+}
+/*Sección About*/
+
+section.about {
+}
+
+/*Sección Hobbies*/
+
+section.hobbies {
+}
+
+/* Experiencia Académica*/
+
+section.academic {
+}
+
+/* experiencia*/
+
+section.experience {
+}
+
+/*Contacto*/
+
+section.formcontato {
+}
+
+/*footeer*/
+
+section.footer {
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+/*Tablet*/
+@media (min-width: 768px) {
+  /* Menú */
+  .title__profile{
+    width: 368px;
+    height: 368px;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /*Sección Title*/
+
+  .menu__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  /*title*/
+  .menu__list__item__contato {
+    display: none;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .title__div {
+    display: flex;
+    width: 1136px;
+    height: 368;
+    flex-direction: row-reverse;
+    align-items: center;
+    
+  }
+
+  .title__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .title__bio{
+    font-size: 52px;
+  }
+  .title__subsection{
+    font-weight: normal;
+    font-size: 22px;
+  }
+
+  .title__network {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  /*Skills*/
+
+  /*Hobbies*/
+
+  /*Formación Académica*/
+
+  /*Experiencia Profesional*/
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+  /* Menú */
+  .title__profile{
+    width: 368px;
+    height: 368px;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /*Sección Title*/
+
+  .menu__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  /*title*/
+  .menu__list__item__contato {
+    display: none;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .title__div {
+    display: flex;
+    width: 1136px;
+    height: 368;
+    flex-direction: row-reverse;
+    align-items: center;
+    
+  }
+
+  .title__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .title__bio{
+    font-size: 52px;
+  }
+  .title__subsection{
+    font-weight: normal;
+    font-size: 22px;
+  }
+
+  .title__network {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  
+  .about{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    padding-left: 150px;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos horizontalmente en el centro */
+}
+
+.skills__line {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
+    justify-content: center; /* Alinea los elementos horizontalmente en el centro */
+}
+
+.skills__box {
+    margin: 10px; /* Espaciado entre las cajas de habilidades */
+    text-align: center; /* Alinea el texto en el centro */
+}
+
+.skills__name {
+    margin-top: 5px; /* Espaciado superior del nombre de la habilidad */
+}
+
+
+
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los elementos horizontalmente en el centro */
+}
+
+.hobbies__line {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
+  justify-content: center; /* Alinea los elementos horizontalmente en el centro */
+}
+
+.hobbies__box {
+  margin: 10px; /* Espaciado entre las cajas de hobbies */
+  text-align: center; /* Alinea el texto en el centro */
+}
+
+.hobbies__name {
+  margin-top: 5px; /* Espaciado superior del nombre del hobby */
+}
+
+.academic {
+  text-align: center; /* Alinea el contenido del título al centro */
+}
+
+.academic__courses {
+  display: flex;
+  justify-content: center; /* Alinea los elementos horizontalmente en el centro */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
+}
+
+.academic__courses__box {
+  width: 250px; /* Establece un ancho fijo para cada caja de cursos */
+  margin: 10px; /* Espaciado entre las cajas de cursos */
+  text-align: left; /* Alinea el texto a la izquierda dentro de las cajas de cursos */
+}
+
+.experience{
+  display: flex;
+  justify-content: center; /* Alinea los elementos horizontalmente en el centro */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
+
+}
+
+.experiencie__box{
+  display: flex;
+  justify-content: center; /* Alinea los elementos horizontalmente en el centro */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
+}
+
+  /*Titulo*/
+
+  /*Sección sobre mi*/
+
+  /*Skills*/
+
+  /*Hobbies*/
+
+  /*Formación Académica*/
+
+  /*Experiencia Profesional*/
+
+  /*Contacto*/
+
+  /*Footer*/
+}
